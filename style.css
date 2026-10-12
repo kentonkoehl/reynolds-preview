@@ -209,7 +209,8 @@ address{font-style:normal}
 /* tell Glenn form */
 .sent{display:none;background:#E6F1E4;border:2px solid #2E6A2A;padding:14px 16px;margin-bottom:20px;font-weight:600}
 .sent:target{display:block}
-.form{display:grid;gap:26px}
+.form{display:grid;gap:26px;grid-template-columns:minmax(0,1fr)}
+.form>*{min-width:0}
 fieldset{border:0;margin:0 0 22px;padding:0;min-width:0}
 legend{font-family:"Barlow Condensed",Arial,sans-serif;font-weight:800;font-style:italic;font-size:1.6rem;text-transform:uppercase;color:var(--blue);padding:0;margin-bottom:8px}
 .hint{color:var(--ink2);font-size:.95rem;margin:-4px 0 10px}
@@ -227,7 +228,7 @@ legend{font-family:"Barlow Condensed",Arial,sans-serif;font-weight:800;font-styl
 .field label{display:block;font-weight:700;margin-bottom:5px}
 .field label small{font-weight:400;color:var(--ink2)}
 input[type=text],input[type=tel],input[type=email],input[type=number],select,textarea{width:100%;font:inherit;padding:11px 12px;border:2px solid var(--ink);background:#fff;border-radius:0;color:var(--ink)}
-input[type=file]{font:inherit;max-width:100%}
+input[type=file]{font:inherit;max-width:100%;width:100%}
 textarea{min-height:130px;resize:vertical}
 .form-side{background:var(--grey);padding:20px;border-top:6px solid var(--red)}
 .form-side h2{font-size:1.7rem}
@@ -264,7 +265,7 @@ textarea{min-height:130px;resize:vertical}
   .prop-story{grid-template-columns:1.2fr 1fr;gap:44px}
   .race{grid-template-columns:1.1fr 1fr;gap:44px}
   .buy{grid-template-columns:1fr auto;gap:30px}
-  .form{grid-template-columns:1fr 330px;align-items:start;gap:40px}
+  .form{grid-template-columns:minmax(0,1fr) 330px;align-items:start;gap:40px}
   .form-side{position:sticky;top:20px}
   .foot-grid{grid-template-columns:1.4fr 1fr 1fr}
   .parts{columns:2;column-gap:36px}
